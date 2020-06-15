@@ -987,7 +987,7 @@
 // @section lcd
 
 #if EITHER(ULTIPANEL, EXTENSIBLE_UI)
-  #define MANUAL_FEEDRATE { 50*60, 50*60, 4*60, 60 } // Feedrates for manual moves along X, Y, Z, E from panel
+  #define MANUAL_FEEDRATE { 50*60, 50*60, 4*60, 2*60 } // Feedrates for manual moves along X, Y, Z, E from panel
   #define SHORT_MANUAL_Z_MOVE 0.025 // (mm) Smallest manual Z move (< 0.1mm)
   #if ENABLED(ULTIPANEL)
     #define MANUAL_E_MOVES_RELATIVE // Display extruder move distance rather than "position"
@@ -2338,14 +2338,14 @@
    * on the same serial port, either here or in your board's pins file.
    */
   #define  X_SLAVE_ADDRESS 0
-  #define  Y_SLAVE_ADDRESS 0
-  #define  Z_SLAVE_ADDRESS 0
+  #define  Y_SLAVE_ADDRESS 2
+  #define  Z_SLAVE_ADDRESS 1
   #define X2_SLAVE_ADDRESS 0
   #define Y2_SLAVE_ADDRESS 0
   #define Z2_SLAVE_ADDRESS 0
   #define Z3_SLAVE_ADDRESS 0
   #define Z4_SLAVE_ADDRESS 0
-  #define E0_SLAVE_ADDRESS 0
+  #define E0_SLAVE_ADDRESS 3
   #define E1_SLAVE_ADDRESS 0
   #define E2_SLAVE_ADDRESS 0
   #define E3_SLAVE_ADDRESS 0
@@ -2487,7 +2487,7 @@
    * Beta feature!
    * Create a 50/50 square wave step pulse optimal for stepper drivers.
    */
-  //#define SQUARE_WAVE_STEPPING
+  #define SQUARE_WAVE_STEPPING
 
   /**
    * Enable M122 debugging command for TMC stepper drivers.
