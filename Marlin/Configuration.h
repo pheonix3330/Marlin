@@ -490,9 +490,9 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   // Ultimaker
-  #define DEFAULT_Kp 19.77
-  #define DEFAULT_Ki 1.84
-  #define DEFAULT_Kd 53.10
+  #define DEFAULT_Kp 29.34
+  #define DEFAULT_Ki 3.15
+  #define DEFAULT_Kd 68.28
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
